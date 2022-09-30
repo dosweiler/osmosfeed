@@ -18,13 +18,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/osmoscraft/osmosfeed.git"
+    "url": "git+https://github.com/dosweiler/osmosfeed.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/osmoscraft/osmosfeed/issues"
+    "url": "https://github.com/dosweiler/osmosfeed/issues"
   },
   "homepage": "https://osmoscraft.org",
   "dependencies": {
