@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/osmoscraft/osmosfeed.git"
+    "url": "git+https://github.com/dosweiler/osmosfeed.git"
   },
   "keywords": [],
   "author": "osmoscraft",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/osmoscraft/osmosfeed/issues"
+    "url": "https://github.com/dosweiler/osmosfeed/issues"
   },
-  "homepage": "https://github.com/osmoscraft/osmosfeed#readme",
+  "homepage": "https://github.com/dosweiler/osmosfeed#readme",
   "workspaces": [
     "./packages/*"
   ]
