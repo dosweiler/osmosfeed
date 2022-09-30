@@ -16,7 +16,18 @@
   <body>
     <!-- %after-body-begin.html% -->
     {{#each dates}}
-      <section class="daily-content js-toggle-accordions-scope">
+      <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >{{title}}</button>
+                  <a class="source-heading__link" href="{{siteUrl}}">Open</a>
+                </h3>
+          {{#each sources}}
+            <section class="daily-content js-toggle-accordions-scope">
         <h2 class="daily-heading">
           <button
             class="daily-heading-toggle"
@@ -27,18 +38,6 @@
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date={{isoOffsetPublishDate}} datetime="{{isoUtcPublishTime}}"></time>
           </button>
         </h2>
-        <ul class="sources card">
-          {{#each sources}}
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >{{title}}</button>
-                  <a class="source-heading__link" href="{{siteUrl}}">Open</a>
-                </h3>
                 <section class="articles-per-source">
                   {{#each articles}}
                     <article>
