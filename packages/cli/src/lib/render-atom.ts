@@ -46,7 +46,13 @@ export function renderAtom({ enrichedSources, config }: RenderAtomInput): string
   });
 
   articles.forEach((article) => {
-    feed.addItem({
+    var articleName = article.title
+    if (articleName.includes("UniFi"){
+        articleName = articleName.substring(0, articleName.indexOf('.')) }
+    else {
+        articleName = articleName.substring(0, articleName.indexOf('_')) }
+    if (articleName.includes("FortiClientEMS") || articleName.title.includes("FortiGate") || articleName.includes("FortiClient ") || articleName.includes("UniFi Access") || articleName.includes("ALAS"))
+      feed.addItem({
       title: article.title,
       id: article.id,
       description: article.description,
@@ -64,6 +70,9 @@ export function renderAtom({ enrichedSources, config }: RenderAtomInput): string
       ],
       date: new Date(article.publishedOn),
     });
+    else {
+      continue
+    }
   });
 
   const atomXml = feed.atom1();
